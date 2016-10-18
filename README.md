@@ -343,3 +343,12 @@ This operation requires admin privileges.
 ![screenshot_41](https://cloud.githubusercontent.com/assets/10474169/19492827/f3521148-953d-11e6-8619-e656bba6753e.png)
 
 Inorder to resolve them make sure you have Resharper -> Check your Resharper Typescript Language settings. Resharper might be set to older version of typescript 1.6.  Download latest version of resharper and restart Visual Studio. In case it doesnt work try to set Typescript language level to 2.0 under Inspection Tab from Resharper Options menu.
+
+- - - -
+- - - -
+
+###Installation ###
+
+After downloading the project and install the dependencies using CMD by redirecting it to project location via:
+
+    > npm install
