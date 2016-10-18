@@ -3,7 +3,9 @@ Step by Step guide of using Angular2 with Typescript for ASP.NET MVC in Visual S
 
 During last couple of months, I have received a lot of requests how to use angular2 in ASP.NET MVC in visual studio environment, Its quite easy to integrate angular2 in asp.net core project, so I am publishing step by step guide to integrate Angular 2 in ASP.NET MVC.
 
-### Step 1: Create an ASP.NET MVC project
+- - - -
+
+## Step 1: Create an ASP.NET MVC project
 
 Create the ASP.NET 4.x project as follows:
 
@@ -20,9 +22,11 @@ Create the ASP.NET 4.x project as follows:
 
 ![screenshot_9](https://cloud.githubusercontent.com/assets/10474169/19492166/31eea5e0-953b-11e6-9475-da8f55f80e62.png)
 
-Please note all configuration and package versions are according to Angular Quickstart Guide
+_Please note all configuration and package versions are according to Angular Quickstart Guide_
 
-### Step 2: Create Package.json file
+- - - -
+
+## Step 2: Create Package.json file
 
 package.json identifies npm package dependencies for the project.
 
@@ -57,11 +61,13 @@ package.json identifies npm package dependencies for the project.
 
 ![screenshot_4](https://cloud.githubusercontent.com/assets/10474169/19492192/52790454-953b-11e6-8087-f5bde93edbbc.png)
 
-Note:
+***Note:***
 
-Please note that @types/core-js are not mentioned in Angular Quickstart Guide in devDepenedcies section, Add this to avoid duplicate identifier error otherwise you are going to get as “Angular 2 can’t find Promise, Map, Set and Iterator”
+**Please note that @types/core-js are not mentioned in Angular Quickstart Guide in devDepenedcies section, Add this to avoid duplicate identifier error otherwise you are going to get as “Angular 2 can’t find Promise, Map, Set and Iterator”**
 
-### Step 3: Create tsconfig.json file
+- - - -
+
+## Step 3: Create tsconfig.json file
 
 This file defines how the TypeScript compiler generates JavaScript from the project’s files.
 
@@ -89,15 +95,17 @@ For Visual Studio 2015 we must add "compileOnSave": true to the TypeScript confi
 
 ![screenshot_12](https://cloud.githubusercontent.com/assets/10474169/19492218/6e478066-953b-11e6-9b33-bbd346c276d8.png)
 
-Note:
+***Note:***
 
-On creating this file you will receive alert from Visual Studio such as below, Just Press No:
+> On creating this file you will receive alert from Visual Studio such as below, Just Press No:
 
 ![screenshot_14](https://cloud.githubusercontent.com/assets/10474169/19492219/6e47daa2-953b-11e6-8b39-f333972bac16.png)
 
-Please note that below code is not note mentioned in Angular Quickstart Guide in tsconfig.json, Add this to avoid duplicate identifier error otherwise you are going to get as “Angular 2 can’t find Promise, Map, Set and Iterator”
+> Please note that below code is not note mentioned in Angular Quickstart Guide in tsconfig.json, Add this to avoid duplicate identifier error otherwise you are going to get as “Angular 2 can’t find Promise, Map, Set and Iterator”
 
 ![screenshot_21](https://cloud.githubusercontent.com/assets/10474169/19492220/6e48424e-953b-11e6-8bfd-26e573266b54.png)
+
+- - - -
 
 ### Step 4: Create typings.json file
 
@@ -112,6 +120,8 @@ This file provides additional definition files for libraries that the TypeScript
     }
 
 ![screenshot_31](https://cloud.githubusercontent.com/assets/10474169/19492286/a6a1dc4a-953b-11e6-9097-5747e5597b39.png)
+
+- - - -
 
 Step 5: Install package.json file
 
@@ -131,6 +141,8 @@ Error messages—in red—might appear during the install, and you might see npm
 Do not include the node_modules folder in the project. Let it be a hidden project folder.But you may view the hidden folder in Visual Studio using “Show All Files” option in Solution Explorer.
 
 ![screenshot_22](https://cloud.githubusercontent.com/assets/10474169/19492284/a69f79a0-953b-11e6-99df-4e19e9f73dea.png)
+
+- - - -
 
 ### Step 6: Create Sample Angular 2 Code using Typescript
 
@@ -194,6 +206,8 @@ Files visible in Folder:
 
 ![screenshot_32](https://cloud.githubusercontent.com/assets/10474169/19492594/e4453f00-953c-11e6-88b7-7c42a0942acd.png)
 
+- - - -
+
 ### Step 7: Create systemjs.config.js file
 
 This file provides information to a module loader about where to find application modules, and registers all the necessary packages.
@@ -249,6 +263,8 @@ Note:
 
 * main attribute highlighted in red color in above image should point to js file which contains angular application startup code, in our case it is main.ts file.
 
+- - - -
+
 ### Step 8: Load and Render Angular2 application in ASP.NET MVC Views
 
 ![screenshot_15](https://cloud.githubusercontent.com/assets/10474169/19492712/7f0b15f0-953d-11e6-9a67-f71a2c706838.png)
@@ -287,6 +303,8 @@ In order to kickstart angular code in browser, integrate component in Views/Home
 
     Loading...
 
+- - - -
+
 ### Step 9: Build and run the app
 
 Click the Run button or press CTRL + F5 to build and run the application.
@@ -297,6 +315,9 @@ This launches the default browser and runs the QuickStart sample application.
 
 
 Try editing any of the project files. Save and refresh the browser to see the changes.
+
+- - - -
+- - - -
 
 In case of Error such as:
 
