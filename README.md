@@ -97,17 +97,17 @@ For Visual Studio 2015 we must add "compileOnSave": true to the TypeScript confi
 
 ***Note:***
 
-> On creating this file you will receive alert from Visual Studio such as below, Just Press No:
+* On creating this file you will receive alert from Visual Studio such as below, Just Press No:
 
 ![screenshot_14](https://cloud.githubusercontent.com/assets/10474169/19492219/6e47daa2-953b-11e6-8b39-f333972bac16.png)
 
-> Please note that below code is not note mentioned in Angular Quickstart Guide in tsconfig.json, Add this to avoid duplicate identifier error otherwise you are going to get as “Angular 2 can’t find Promise, Map, Set and Iterator”
+* Please note that below code is not note mentioned in Angular Quickstart Guide in tsconfig.json, Add this to avoid duplicate identifier error otherwise you are going to get as “Angular 2 can’t find Promise, Map, Set and Iterator”
 
 ![screenshot_21](https://cloud.githubusercontent.com/assets/10474169/19492220/6e48424e-953b-11e6-8bfd-26e573266b54.png)
 
 - - - -
 
-### Step 4: Create typings.json file
+## Step 4: Create typings.json file
 
 This file provides additional definition files for libraries that the TypeScript compiler doesn’t natively recognize.
 
@@ -123,11 +123,11 @@ This file provides additional definition files for libraries that the TypeScript
 
 - - - -
 
-Step 5: Install package.json file
+## Step 5: Install package.json file
 
 Open CMD and redirect to your application folder and Using npm from the command line, install the packages listed in package.json with the command:
 
-> npm install
+    > npm install
 
 ![screenshot_19](https://cloud.githubusercontent.com/assets/10474169/19492287/a6a3300e-953b-11e6-81a8-4da455d54858.png)
 
@@ -135,20 +135,21 @@ After executing command, output will be like this.
 
 ![screenshot_20](https://cloud.githubusercontent.com/assets/10474169/19492285/a6a03e80-953b-11e6-8cde-c9c1068dd092.png)
 
-Note:
+***Note:***
 
-Error messages—in red—might appear during the install, and you might see npm WARN messages. As long as there are no npm ERR! messages at the end, you can assume success.
-Do not include the node_modules folder in the project. Let it be a hidden project folder.But you may view the hidden folder in Visual Studio using “Show All Files” option in Solution Explorer.
+- Error messages—in red—might appear during the install, and you might see npm WARN messages. As long as there are no npm ERR! messages at the end, you can assume success.
+
+- Do not include the node_modules folder in the project. Let it be a hidden project folder.But you may view the hidden folder in Visual Studio using “Show All Files” option in Solution Explorer.
 
 ![screenshot_22](https://cloud.githubusercontent.com/assets/10474169/19492284/a69f79a0-953b-11e6-99df-4e19e9f73dea.png)
 
 - - - -
 
-### Step 6: Create Sample Angular 2 Code using Typescript
+## Step 6: Create Sample Angular 2 Code using Typescript
 
-- Create a folder name “App” in Scripts folder
+1. Create a folder name “App” in Scripts folder
 
-- Create application module file
+2. Create application module file
 
 Angular itself is split into separate Angular Modules. This makes it possible for you to keep payload size small by only importing the parts of Angular that your application needs.Every Angular application has at least one module: the root module, named AppModule here.
 
@@ -170,7 +171,7 @@ Root module needs to import the BrowserModule from @angular/platform-browser to 
 
 This is the smallest amount of Angular that is needed for a minimal application to run in the browser.
 
-- Create a component & add it to your application
+3. Create a component & add it to your application
 
 Every Angular application has at least one component: the root component, named AppComponent here.Components are the basic building blocks of Angular applications. A component controls a portion of the screen—a view—through its associated template.
 
@@ -183,7 +184,7 @@ Create the file App/app.component.ts with the following content:
     }) 
     export class AppComponent { }
 
-- Create a Start up file
+4. Create a Start up file
 
 Now we need to tell Angular to start up your application.
 
@@ -196,19 +197,19 @@ Create the file App/main.ts with the following content:
 
 This code initializes the platform that your application runs in, then uses the platform to bootstrap your AppModule.
 
-Note:
+***Note:***
 
-Please note that transplied typescript files will automatically be available in App folder as we have mentioned attribute CompileOnSave is true in tsconfig.json Files visible in Visual Studio:
+>> Please note that transplied typescript files will automatically be available in App folder as we have mentioned attribute CompileOnSave is true in tsconfig.json Files visible in Visual Studio:
 
 ![screenshot_23](https://cloud.githubusercontent.com/assets/10474169/19492595/e445c5ec-953c-11e6-9cd8-ee66593f12bb.png)
 
-Files visible in Folder:
+>> Files visible in Folder:
 
 ![screenshot_32](https://cloud.githubusercontent.com/assets/10474169/19492594/e4453f00-953c-11e6-88b7-7c42a0942acd.png)
 
 - - - -
 
-### Step 7: Create systemjs.config.js file
+## Step 7: Create systemjs.config.js file
 
 This file provides information to a module loader about where to find application modules, and registers all the necessary packages.
 
@@ -265,22 +266,20 @@ Note:
 
 - - - -
 
-### Step 8: Load and Render Angular2 application in ASP.NET MVC Views
+## Step 8: Load and Render Angular2 application in ASP.NET MVC Views
 
 ![screenshot_15](https://cloud.githubusercontent.com/assets/10474169/19492712/7f0b15f0-953d-11e6-9a67-f71a2c706838.png)
 
 * In order to load angular 2 application in MVC, integrate angular 2 libraries references and system.js configurations in Views/Shared/_Layout.cshtml file
    
    
-       @ViewBag.Title - My ASP.NET Application
+        @ViewBag.Title - My ASP.NET Application
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
         http://~/node_modules/core-js/client/shim.min.js
         http://~/node_modules/zone.js/dist/zone.js
         http://~/node_modules/reflect-metadata/Reflect.js
         http://~/node_modules/systemjs/dist/system.src.js
-
-
         http://~/Scripts/systemjs.config.js
 
             System.import('../../Scripts/App/main').catch(function (err)
@@ -295,7 +294,7 @@ Mention your angular 2 main file reference (file which contains application boot
 
     System.import('../../Scripts/App/main')
     
-In order to kickstart angular code in browser, integrate component in Views/Home/index.cshtml file
+* In order to kickstart angular code in browser, integrate component in Views/Home/index.cshtml file
 
     @{
         ViewBag.Title = "Home Page";
@@ -305,7 +304,7 @@ In order to kickstart angular code in browser, integrate component in Views/Home
 
 - - - -
 
-### Step 9: Build and run the app
+## Step 9: Build and run the app
 
 Click the Run button or press CTRL + F5 to build and run the application.
 
@@ -319,9 +318,9 @@ Try editing any of the project files. Save and refresh the browser to see the ch
 - - - -
 - - - -
 
-In case of Error such as:
+###In case of Error such as:###
 
-Error 1
+***Error 1***
 Compiler errors such as “Property map does not exist on type Observable” and “Observable cannot be found” indicate an old release of Visual Studio. Exit Visual Studio and follow the instructions here.
 
 You’ll be asked to replace the file
@@ -329,7 +328,7 @@ You’ll be asked to replace the file
     c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TypeScript.typescriptServices.js
 This operation requires admin privileges.
 
-Error 2
+***Error 2***
 IDE issues such as ‘component can not be properly resolved, probably its located in an inaccessible module’
 
 ![screenshot_33](https://cloud.githubusercontent.com/assets/10474169/19492825/f350b384-953d-11e6-8067-97bb48629bcf.png)
