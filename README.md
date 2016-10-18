@@ -147,9 +147,9 @@ After executing command, output will be like this.
 
 ## Step 6: Create Sample Angular 2 Code using Typescript
 
-1. Create a folder name “App” in Scripts folder
+* Create a folder name “App” in Scripts folder
 
-2. Create application module file
+* Create application module file
 
 Angular itself is split into separate Angular Modules. This makes it possible for you to keep payload size small by only importing the parts of Angular that your application needs.Every Angular application has at least one module: the root module, named AppModule here.
 
@@ -171,7 +171,7 @@ Root module needs to import the BrowserModule from @angular/platform-browser to 
 
 This is the smallest amount of Angular that is needed for a minimal application to run in the browser.
 
-3. Create a component & add it to your application
+* Create a component & add it to your application
 
 Every Angular application has at least one component: the root component, named AppComponent here.Components are the basic building blocks of Angular applications. A component controls a portion of the screen—a view—through its associated template.
 
@@ -184,7 +184,7 @@ Create the file App/app.component.ts with the following content:
     }) 
     export class AppComponent { }
 
-4. Create a Start up file
+* Create a Start up file
 
 Now we need to tell Angular to start up your application.
 
@@ -296,11 +296,11 @@ Mention your angular 2 main file reference (file which contains application boot
     
 * In order to kickstart angular code in browser, integrate component in Views/Home/index.cshtml file
 
-    @{
-        ViewBag.Title = "Home Page";
-    }
+        @{
+            ViewBag.Title = "Home Page";
+        }
 
-    Loading...
+        Loading...
 
 - - - -
 
@@ -321,19 +321,22 @@ Try editing any of the project files. Save and refresh the browser to see the ch
 ###In case of Error such as:###
 
 ***Error 1***
-Compiler errors such as “Property map does not exist on type Observable” and “Observable cannot be found” indicate an old release of Visual Studio. Exit Visual Studio and follow the instructions here.
+
+**Compiler errors such as “Property map does not exist on type Observable” and “Observable cannot be found” indicate an old release of Visual Studio. Exit Visual Studio and follow the instructions here.**
 
 You’ll be asked to replace the file
 
     c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TypeScript.typescriptServices.js
+    
 This operation requires admin privileges.
 
 ***Error 2***
-IDE issues such as ‘component can not be properly resolved, probably its located in an inaccessible module’
+
+**IDE issues such as ‘component can not be properly resolved, probably its located in an inaccessible module’**
 
 ![screenshot_33](https://cloud.githubusercontent.com/assets/10474169/19492825/f350b384-953d-11e6-8067-97bb48629bcf.png)
 
-occurs when angular2 keyowrd are highlighted red as no intellisense is available for them by Visual Studio 2015 visible in below images
+**occurs when angular2 keyowrd are highlighted red as no intellisense is available for them by Visual Studio 2015 visible in below images**
 
 ![screenshot_6](https://cloud.githubusercontent.com/assets/10474169/19492826/f351f6d6-953d-11e6-8e21-11c45a99f1fb.png)
 
