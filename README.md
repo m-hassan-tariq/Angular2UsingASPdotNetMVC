@@ -1,5 +1,5 @@
-# Angular2 Using ASP.NET MVC
-Step by Step guide of using Angular2 with Typescript for ASP.NET MVC in Visual Studio 2015 
+# Step by Step guide of using Angular2 with Typescript for ASP.NET MVC in Visual Studio 2015 
+
 
 During last couple of months, I have received a lot of requests how to use angular2 in ASP.NET MVC in visual studio environment, Its quite easy to integrate angular2 in asp.net core project, so I am publishing step by step guide to integrate Angular 2 in ASP.NET MVC.
 
